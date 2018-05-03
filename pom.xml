@@ -8,6 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>fm-front</module>
+        <module>fm-front-war</module>
     </modules>
     <packaging>pom</packaging>
 
