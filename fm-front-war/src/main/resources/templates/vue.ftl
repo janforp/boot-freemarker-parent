@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello ${name}!</title>
-    <link href="/css/main.css" rel="stylesheet">
-    <#--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>-->
-    <script src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/common/jquery-3.2.1.js"></script>
+    <link href="${baseUrl}/css/main.css" rel="stylesheet">
+    <script src="${baseUrl}/js/main.js"></script>
+    <script type="text/javascript" src="${baseUrl}/js/common/jquery-3.2.1.js"></script>
 </head>
 <body>
     <h2 class="hello-title">Hello</h2>
@@ -15,11 +14,11 @@
 </body>
 <script>
     $(function () {
-        
+        const baseUrl = '${baseUrl}';
         $("#btn").click(
             function () {
                 $.post(
-                        '/postData',
+                        baseUrl + 'postData',
                         {
                             name:'Lucy',
                             age:40

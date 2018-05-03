@@ -21,12 +21,14 @@ public class PageController {
     @GetMapping("/hello")
     public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
+        initModel(model);
         return "hello";
     }
 
     @GetMapping("/page/{name}")
     public String page(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
+        initModel(model);
         return "page";
     }
 
@@ -38,6 +40,11 @@ public class PageController {
     @GetMapping("/vue")
     public String vue(Model model) {
         model.addAttribute("name", "Jania");
+        initModel(model);
         return "vue";
+    }
+
+    private void initModel(Model model) {
+        model.addAttribute("baseUrl", "http://127.0.0.1:8080/fm/");
     }
 }

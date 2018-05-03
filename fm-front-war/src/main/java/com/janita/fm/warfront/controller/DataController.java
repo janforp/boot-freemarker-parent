@@ -1,10 +1,7 @@
 package com.janita.fm.warfront.controller;
 
 import com.janita.fm.warfront.dto.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
 
@@ -13,6 +10,7 @@ import java.util.Random;
  * Desc:
  */
 @RestController
+@CrossOrigin
 public class DataController {
 
     @GetMapping("/data")
