@@ -18,7 +18,7 @@
         $("#btn").click(
             function () {
                 $.post(
-                        baseUrl + 'postData',
+                        baseUrl + '/postData',
                         {
                             name:'Lucy',
                             age:40

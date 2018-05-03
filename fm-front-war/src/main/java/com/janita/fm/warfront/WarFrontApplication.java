@@ -1,8 +1,10 @@
 package com.janita.fm.warfront;
 
+import com.janita.fm.warfront.config.CustomProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
@@ -10,6 +12,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * Desc:
  */
 @SpringBootApplication
+@EnableConfigurationProperties({CustomProperties.class})
 public class WarFrontApplication  extends SpringBootServletInitializer {
 
     @Override
