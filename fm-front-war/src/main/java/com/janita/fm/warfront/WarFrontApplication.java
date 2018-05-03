@@ -1,3 +1,5 @@
+package com.janita.fm.warfront;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -6,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Desc:
  */
 @SpringBootApplication
-public class FrontApplication {
+public class WarFrontApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FrontApplication.class, args);
+        SpringApplication.run(WarFrontApplication.class, args);
     }
 }

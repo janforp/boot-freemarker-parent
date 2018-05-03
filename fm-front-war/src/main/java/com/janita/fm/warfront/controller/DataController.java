@@ -1,6 +1,6 @@
-package controller;
+package com.janita.fm.warfront.controller;
 
-import dto.User;
+import com.janita.fm.warfront.dto.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

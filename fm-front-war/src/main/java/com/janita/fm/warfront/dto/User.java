@@ -1,4 +1,4 @@
-package dto;
+package com.janita.fm.warfront.dto;
 
 /**
  * Created by Janita on 2018/5/3.
