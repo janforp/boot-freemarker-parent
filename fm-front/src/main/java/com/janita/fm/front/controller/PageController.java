@@ -29,4 +29,15 @@ public class PageController {
         model.addAttribute("name", name);
         return "page";
     }
+
+    /**
+     * http://localhost:8080/vue
+     * @param model
+     * @return
+     */
+    @GetMapping("/vue")
+    public String vue(Model model) {
+        model.addAttribute("name", "Jania");
+        return "vue";
+    }
 }

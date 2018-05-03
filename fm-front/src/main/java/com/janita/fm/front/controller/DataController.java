@@ -1,8 +1,9 @@
 package com.janita.fm.front.controller;
 
 import com.janita.fm.front.dto.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Random;
 
 /**
  * Created by Janita on 2018/5/3.
@@ -16,6 +17,14 @@ public class DataController {
         User user = new User();
         user.setAge(29);
         user.setName("Janita");
+        return user;
+    }
+
+    @PostMapping("/postData")
+    public User postData(@RequestParam String name, @RequestParam Integer age) {
+        User user = new User();
+        user.setName(name);
+        user.setAge(new Random().nextInt());
         return user;
     }
 }
