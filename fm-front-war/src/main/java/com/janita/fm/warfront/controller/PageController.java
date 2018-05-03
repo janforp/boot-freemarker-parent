@@ -1,6 +1,7 @@
 package com.janita.fm.warfront.controller;
 
 import com.janita.fm.warfront.config.CustomProperties;
+import com.janita.fm.warfront.utils.ModelUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,21 +16,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PageController {
 
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        ModelUtils.initModel(model);
         return "index";
     }
 
     @GetMapping("/hello")
     public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
-        initModel(model);
+        ModelUtils.initModel(model);
         return "hello";
     }
 
     @GetMapping("/page/{name}")
     public String page(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        initModel(model);
+        ModelUtils.initModel(model);
         return "page";
     }
 
@@ -41,11 +43,9 @@ public class PageController {
     @GetMapping("/vue")
     public String vue(Model model) {
         model.addAttribute("name", "Jania");
-        initModel(model);
+        ModelUtils.initModel(model);
         return "vue";
     }
 
-    private void initModel(Model model) {
-        model.addAttribute("baseUrl", CustomProperties.BASE_URL);
-    }
+
 }
