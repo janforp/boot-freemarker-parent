@@ -24,6 +24,12 @@ public class PageController {
         return "hello";
     }
 
+    @GetMapping("/multImageUpload")
+    public String multImageUpload(Model model) {
+        model.addAttribute("baseUrl", "http://127.0.0.1:8111/");
+        return "multImageUpload";
+    }
+
     @GetMapping("/page/{name}")
     public String page(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
