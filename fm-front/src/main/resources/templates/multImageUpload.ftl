@@ -37,11 +37,18 @@
     </div>
 </div>
 <script>
+
+    $(function () {
+
+    })
+
     /**
      * 点击上传图片按钮
      */
     function clickUploadInput() {
+
         $("#fileUpload").click();
+
     }
 
     /**

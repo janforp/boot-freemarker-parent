@@ -18,6 +18,17 @@
         
         $("#btn").click(
             function () {
+                let json = {};
+                json.success = true;
+                json.msg = 'SUCCESS';
+
+                json = JSON.stringify(json);
+                console.log('***json *', json);
+
+                if (typeof(json) == "string") {
+                    var data = JSON.parse(json);
+                    console.log('****', typeof(data.success))
+                };
                 $.post(
                         '/postData',
                         {
